@@ -7,6 +7,7 @@ class Pemilik extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Menu_model');
+        $this->load->model('Pembeli_model');
     }
 
     public function index()
@@ -76,5 +77,9 @@ class Pemilik extends CI_Controller
         $this->Menu_model->hapus_data($where, 'db_data_menu');
         redirect('pemilik/data_menu');
     }
-
+    public function data_pembeli()
+    {
+        $data['data_pembeli'] = $this->Pembeli_model->getAll()->result();
+        $this->template_pemilik->views('pemilik/data_pembeli', $data);
+    }
 }
