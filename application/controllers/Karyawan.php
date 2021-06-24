@@ -51,7 +51,7 @@ class Karyawan extends CI_Controller
     public function edit_menu($id_menu)
     {
         $where = array('id_menu' => $id_menu);
-        $data['data_menu'] = $this->Menu_model->edit_data($where, 'db_data_menu')->result();
+        $data['id_menu'] = $this->Menu_model->edit_data($where, 'db_data_menu')->result();
         $this->template_karyawan->views('karyawan/edit_menu', $data);
     }
     public function update_menu()
