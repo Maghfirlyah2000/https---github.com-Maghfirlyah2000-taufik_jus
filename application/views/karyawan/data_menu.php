@@ -24,16 +24,16 @@
                         </tr>
                     </thead>
                     <tfoot>
-                    <tr>
-                        <th>No</th>
-                        <th>Kode Minuman</th>
-                        <th>Nama Minuman</th>
-                        <th>Harga</th>
-                        <th>Kategori</th>
-                        <th>Edit</th>
-                        <th>Hapus</th>
-                    </tr>
-                </tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>Kode Minuman</th>
+                            <th>Nama Minuman</th>
+                            <th>Harga</th>
+                            <th>Kategori</th>
+                            <th>Edit</th>
+                            <th>Hapus</th>
+                        </tr>
+                    </tfoot>
 
                     <?php
                     foreach ($data_menu as $row) {
@@ -47,9 +47,10 @@
                                 <td><?php echo $row->harga; ?></td>
                                 <td><?php echo $row->id_kategori_jus; ?></td>
                                 <td>
-                                    <a style="color:red" class="fa fa-edit" href="<?php echo base_url('karyawan/edit_menu/' . $row->id_menu); ?>">&nbsp;</a></td>
-                                    <td><a style="color:black" onclick="return confirm('Yakin Hapus?')" class="fas fa-trash-alt" href="<?php echo base_url('karyawan/hapus_menu/' . $row->id_menu); ?>">&nbsp;</a></td>
-                                    
+                                    <a style="color:red" class="fa fa-edit" href="<?php echo base_url('karyawan/edit_menu/' . $row->id_menu); ?>">&nbsp;</a>
+                                </td>
+                                <td><a style="color:black" onclick="return confirm('Yakin Hapus?')" class="fas fa-trash-alt" href="<?php echo base_url('karyawan/hapus_menu/' . $row->id_menu); ?>">&nbsp;</a></td>
+
                             </tr>
                         <?php
                     }

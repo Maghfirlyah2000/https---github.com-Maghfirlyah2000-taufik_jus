@@ -18,14 +18,7 @@
 
                 <form action="<?php echo base_url('karyawan/update_menu'); ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group row">
-                        <label for="id_menu" class="col-sm-3 col-form-label">1. Id Menu :</label>
-                        <div class="col-sm-9">
-                            <input type="hidden" class="form-control" id="id_menu" name="id_menu" value="<?php echo $row->id_menu; ?>">
-                            <input type="text" class="form-control" id="id_menu" name="id_menu" value="<?php echo $row->id_menu; ?>">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="kode_minuman" class="col-sm-3 col-form-label">2. Kode Minuman :</label>
+                        <label for="kode_minuman" class="col-sm-3 col-form-label">1. Kode Minuman :</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="kode_minuman" name="kode_minuman" value="<?php echo $row->kode_minuman; ?>">
                         </div>

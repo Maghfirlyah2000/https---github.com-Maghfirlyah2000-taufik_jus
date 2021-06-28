@@ -34,7 +34,7 @@
 </div>
 </div>
 <!-- Untuk Controller -->
-<nav class="navbar navbar-expand-lg navbar-light p-0 ">
+<nav class="navbar navbar-expand-lg navbar-light p-0 " >
     <div class="col-lg-3 bg-tanggal m-0 ">
         <h5 class="p-1">
             <?php setlocale(LC_ALL, 'indonesian');
@@ -44,7 +44,7 @@
     <div class="col pink">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav text-navbar">
-                <div class="menu">
+                <div class="menu" >
                     <ul>
                         <li><a class="judul" href="index.php?page=home">HOME</a>
                         <li><a href="index.php?page=profil">PROFIL</a>

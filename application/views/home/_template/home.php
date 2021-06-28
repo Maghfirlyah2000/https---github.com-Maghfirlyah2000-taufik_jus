@@ -1,4 +1,21 @@
-<div class="container">
+<?php if (isset($_SESSION['Siswa'])) {
+    header("location:../siswa/dash_siswa.php");
+    exit;
+} else if (isset($_SESSION['Guru'])) {
+    header("location:../guru/dash_guru.php");
+    exit;
+} else if (isset($_SESSION['Admin'])) {
+    header("location:../admin/dash-admin.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<?php $this->load->view("home/_template/header.php") ?>
+<body>
+<?php $this->load->view("home/_template/navbar.php") ?>
+    <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide my-5" data-ride="carousel" data-interval="3000">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -42,3 +59,23 @@
         </div>
     </div>
 </div>
+
+<div id="modal-wrapper" class="modal">
+        <?php $this->load->view("home/_template/login.php") ?>
+    </div>
+
+    <div id="modal-wrapper3" class="modal">
+        <?php $this->load->view("home/_template/lupapassword.php") ?>
+    </div>
+
+    <div id="modal-wrapper2" class="modal">
+        <?php $this->load->view("home/_template/registrasi.php") ?>
+    </div>
+
+    <?php $this->load->view("home/_template/footer.php") ?>
+
+    <?php $this->load->view("home/_template/js.php") ?>
+
+</body>
+
+</html>

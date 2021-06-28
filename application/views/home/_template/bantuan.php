@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Bantuan</title>
 </head>
+
+<?php $this->load->view("home/_template/header.php") ?>
+    <body>
+        <?php $this->load->view("home/_template/navbar.php") ?>
 
 <body>
     <div class="container bantuan mt-3">
@@ -61,6 +65,24 @@
             </div>
         </div>
     </div>
+</body>
+</html>
+<div id="modal-wrapper" class="modal">
+        <?php $this->load->view("home/_template/login.php") ?>
+    </div>
+
+    <div id="modal-wrapper3" class="modal">
+        <?php $this->load->view("home/_template/lupapassword.php") ?>
+    </div>
+
+    <div id="modal-wrapper2" class="modal">
+        <?php $this->load->view("home/_template/registrasi.php") ?>
+    </div>
+
+    <?php $this->load->view("home/_template/footer.php") ?>
+
+    <?php $this->load->view("home/_template/js.php") ?>
+
 </body>
 
 </html>

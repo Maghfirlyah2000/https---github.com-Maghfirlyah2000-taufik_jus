@@ -1,15 +1,3 @@
-<?php session_start(); ?>
-<?php if (isset($_SESSION['Siswa'])) {
-    header("location:../siswa/dash_siswa.php");
-    exit;
-} else if (isset($_SESSION['Guru'])) {
-    header("location:../guru/dash_guru.php");
-    exit;
-} else if (isset($_SESSION['Admin'])) {
-    header("location:../admin/dash-admin.php");
-    exit;
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +11,13 @@
     <?php
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
-
         switch ($page) {
             case 'home':
+                // echo base_url('home');
                 $this->load->view("home/_template/home.php");
                 break;
             case 'profil':
+                // echo base_url('home/profil');
                 $this->load->view("home/_template/profil.php");
                 break;
             case 'fasilitas':
